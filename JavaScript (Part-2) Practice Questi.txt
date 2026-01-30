@@ -1,0 +1,101 @@
+                                  JavaScript (Part-2) Practice Questions
+                                 ________________________________________
+
+
+
+
+
+//1. Create a number variable num with some values. Now, print "good" if the number is divisible by 10
+//   and print "bad" if it is not.
+
+let num = 50;
+if(num%10==0){
+    console.log("good");
+}
+else{
+    console.log("bad");
+}
+______________________________________________________________________________________________________
+
+/*2. Take the user's name & age as an input using prompts. Then return back the following statement to
+     the user as an alert (by substituting their name and age): name is age is years old.
+     [Use template Literals to print this sentence]*/
+
+let name = prompt("Please enter your name");
+let age = prompt("Please enter your age");
+alert(`${name} is ${age} years old.`);
+_______________________________________________________________________________________________________
+
+/*3. Write a switch statement to print the months in a quarter.
+     Months in Quarter 1: January, February, March 
+     Months in Quarter 2: April, May, June 
+     Months in Quarter 3: July, August, September 
+     Months in Quarter 4: October, November, December
+     [Use the number as the case value in switch]*/
+     
+let Quarter = 2;
+switch(Quarter){
+    case 1:{
+        console.log("Months in Quarter 1: ", "January", ",", "February", ",", "March");
+        break;
+    }
+    case 2:{
+        console.log("Months in Quarter 2: ", "April", ",", "May", ",", "June");
+        break;
+    }
+    case 3:{
+        console.log("Months in Quarter 3: ", "July", ",", "August", ",", "September");
+        break;
+    }
+    case 4:{
+        console.log("Months in Quarter 4: ", "October", ",", "November", ",", "December");
+        break;
+    }
+    default:{
+        console.log("Invalid Quarter number");
+    }
+}
+_______________________________________________________________________________________________________
+
+//4. A string is a golden string if it starts with the character 'A' or 'a' and has a total length
+//   greater than 5. For the given string print if it is golden or not.
+
+let str = "Ananya";
+if((str[0]=='A' || str[0]=='a') && str.length>5){
+    console.log("golden string.");
+}
+else{
+    console.log("not a golden string.");
+}
+_______________________________________________________________________________________________________
+
+//5. Write a program to find the largest of 3 numbers.
+
+let num1 = 67;
+let num2 = 86;
+let num3 = 890;
+
+if(num1>num2 && num1>num3){
+    console.log(`${num1} is the largest number.`);
+}
+else if(num2>num3){
+    console.log(`${num2} is the largest number.`);
+}
+else{
+    console.log(`${num3} is the largest number.`);
+}
+______________________________________________________________________________________________________
+
+//6. Write a program to check if 2 numbers have the same last digit.
+//   Eg: 32 and 47852 have the same last digit i.e. 2
+
+let num1 = 67547;
+let num2 = 8667;
+
+if((num1%10) == (num2%10)){
+    console.log(`${num1} and ${num2} have the same last digit i.e. ${num1%10}`);
+}
+else{
+    console.log(`${num1} and ${num2} don't have the same last digit.`);
+}
+_______________________________________________________________________________________________________
