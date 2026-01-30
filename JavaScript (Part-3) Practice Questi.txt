@@ -1,0 +1,69 @@
+                              JavaScript (Part-3) Practice Questions
+                             _________________________________________
+
+
+
+
+
+
+
+
+//1. Write a JavaScript program to get the first n elements of an array. [n can be any positive number].
+//   For example: for array [7, 9, 0, -2] and n=3 Print, [7, 9, 0]
+
+let arr = [5, 4, 7, 0, 9];
+let n = 3;
+let ans = arr.slice(0, n);
+console.log(ans);
+________________________________________________________________________________________________________
+
+//2. Write a JavaScript program to get the last n elements of an array. [n can be any positive number].
+//   For example: for array [7, 9, 0, - 2] and n=3 Print, [9, 0, -2]
+
+let arr = [5, 7, 2, 0, 8];
+let n = 3;
+let ans = arr.splice(arr.length-n);
+console.log(ans);
+_________________________________________________________________________________________________________
+
+//3. Write a JavaScript program to check whether a string is blank or not.
+
+let str = prompt("Please enter a string");
+if(str.length==0){
+    console.log("string is blank");
+}
+else{
+    console.log("string is not blank");
+}
+_________________________________________________________________________________________________________
+
+//4. Write a JavaScript program to test whether the character at the given (character) index is lower case.
+
+let str = "JyOtiRAjPoOT";
+let index = 9;
+if(str[index]>='a' && str[index]<='z'){
+    console.log(`character at index ${index} is lower case.`);
+}
+else{
+    console.log(`character at index ${index} is not lower case.`);
+}
+_________________________________________________________________________________________________________
+
+//5. Write a JavaScript program to strip leading and trailing spaces from a string.
+
+let str = "      Jyoti Rajpoot    ";
+console.log(`Original string = ${str}`);
+console.log(`string without spaces = ${str.trim()}`);
+_________________________________________________________________________________________________________
+
+//6. Write a JavaScript program to check if an element exists in an array or not.
+
+let arr = ["Jyoti", 20, "feb", 1999, 27];
+let element = "Rajpoot";
+if(arr.indexOf(element) != -1){
+    console.log(`${element} exists in this array`);
+}
+else{
+    console.log(`${element} does not exists in this array`);
+}
+_________________________________________________________________________________________________________
