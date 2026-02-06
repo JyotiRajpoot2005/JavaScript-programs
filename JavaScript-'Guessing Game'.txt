@@ -1,0 +1,30 @@
+                                     JavaScript-'Guessing Game'
+                                    ___________________________
+
+
+
+
+
+
+
+let max = prompt("Please enter a max number.");
+const random = Math.floor(Math.random() * max) +1;
+let guess = prompt("Please enter your guess");
+
+while(true){
+    if(guess=="quit"){
+        console.log("You quit the game!");
+        break;
+    }
+    else if(guess>random){
+        guess = prompt("Too big!, Please try again");
+    }
+    else if(guess<random){
+        guess = prompt("Too small, Please try again");
+    }
+    else{
+        console.log(`Congratulations!, You win! The number was ${random}.`);
+        break;
+    }
+}
+______________________________________________________________________________________________________________
