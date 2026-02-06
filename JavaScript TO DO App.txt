@@ -1,0 +1,48 @@
+                                                JavaScript TO Do App
+                                               ______________________
+
+
+
+
+
+
+
+let todo = ["Jyoti", 27, "Delhi"];
+let req = prompt("Please enter your request");
+while(true){
+    
+    if(req=="show"){
+      console.log("---------------------------");
+      for(list of todo){
+        console.log(list);
+      }
+      console.log("---------------------------");
+    }
+
+    if(req=="add"){
+      let item = prompt("Please enter your item:");
+      todo.push(item);
+      console.log("Item added!");
+    }
+
+    if(req=="quit"){
+        console.log("You quit!");
+        break;
+    }
+    
+    if(req=="delete"){
+        let item_delete = prompt("Please enter the item you want to delete");
+        let index = todo.indexOf(item_delete);
+        todo.splice(index, 1);
+        console.log("Item deleted!");
+    }
+    req = prompt("Please enter your request again");
+}
+______________________________________________________________________________________________________________
+
+
+
+
+
+
+
