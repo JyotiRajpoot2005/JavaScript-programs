@@ -1,0 +1,89 @@
+                                   JavaScript (Part-6) Practice Questions
+                                  ________________________________________
+
+
+
+
+
+
+
+
+//1. Write a JavaScript function that returns array elements larger than a number.
+
+let arr = [4, 7, 9, 14, 20, 5, 79, 54, 8];
+let num = 8;
+
+function largerThan(arr,num){
+  let result = [];
+  for(let i=0; i<arr.length; i++){
+    if(arr[i] > num){
+        result.push(arr[i]);
+    }
+  }
+  return result;
+}
+console.log(largerThan(arr, num));
+______________________________________________________________________________________________________________
+
+//2. Write a JavaScript function to extract unique characters from a string. 
+//   Example: str = “abcdabcdefgggh” ans = “abcdefgh” 
+
+let str = "abcdabcdefggghijji";
+
+function uniChars(str){
+    let ans = "";
+ for(let i=0; i<str.length; i++){
+    if(ans.indexOf(str[i])===-1){
+        ans += str[i];
+    }
+ }
+ console.log(ans);
+}
+
+uniChars(str);
+______________________________________________________________________________________________________________
+
+//3. Write a JavaScript function that accepts a list of country names as input and returns the longest country
+//   name as output. Example : country = ["Australia", "Germany", "United States of America"] 
+//   output : "United States of America"
+
+let country = ["Australia", "Germany", "United States of America"];
+
+function longestCountry(country){
+ let longest = "";
+ for(let i=0; i<country.length; i++){
+    if(country[i].length > longest.length){
+        longest = country[i];
+    }
+ }
+ return longest;
+}
+console.log(longestCountry(country));
+______________________________________________________________________________________________________________
+
+//4. Write a JavaScript function to count the number of vowels in a String argument.
+
+let str = "My name is Jyoti Rajpoot and I am a software developer.";
+
+function getVowels(str){
+  let count = 0;
+  for(let i=0; i<str.length; i++){
+      if(str[i]=='a'|| str[i]=='A'|| str[i]=='e' || str[i]=='E' || str[i]=='i' || str[i]=='I' || str[i]=='o' || str[i]=='O' || str[i]=='u' || str[i]=='U'){
+            count++;
+       }
+   }
+ return count;
+}
+console.log(getVowels(str));
+______________________________________________________________________________________________________________
+
+//5. Write a JavaScript function to generate a random number within a range (start, end).
+
+let start = 20;
+let end = 100;
+
+function randomNumber(start, end){
+ return Math.floor(Math.random()* (end - start)) + start;
+}
+console.log(randomNumber(start, end));
+______________________________________________________________________________________________________________
