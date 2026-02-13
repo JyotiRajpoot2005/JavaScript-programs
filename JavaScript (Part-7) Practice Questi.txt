@@ -1,0 +1,74 @@
+                                 JavaScript (Part-7) Practice Questions
+                                ________________________________________
+
+
+
+
+
+
+
+
+//1. Write an arrow function named arrayAverage that accepts an array of numbers and returns the 
+//   average of those numbers.
+
+const arrayAverage = (arr) => {
+   let sum=0;
+   for(let i=0; i<arr.length; i++){
+     sum+=arr[i];
+   }
+   return sum/arr.length;
+};
+
+let arr = [5, 8, 4, 20, 56];
+console.log(`average = ${arrayAverage(arr)}`);
+______________________________________________________________________________________________________________
+
+//2. Write an arrow function named isEven() that takes a single number as argument and returns if 
+//   it is even or not.
+
+const isEven = (n) => {
+   if(n%2==0){
+    return "even";
+   }
+   else{
+    return "odd";
+   }
+}
+
+let n = 69;
+console.log(isEven(n));
+______________________________________________________________________________________________________________
+
+//3. What is the output of the following code:
+
+const object = {
+   message: 'Hello, World',
+   
+   logMessage() {
+     console.log(this.message);     // 'this' equals to global object in regular function invocation.
+   }
+}
+
+setTimeout(object.logMessage, 1000);
+
+//Output: Undefined is logged to the console, after a delay of 1 second.
+______________________________________________________________________________________________________________
+
+//4. What is the output of the following code:
+
+let length = 4;
+function callback() {
+    console.log(this.length);
+}
+
+const object = {
+    length: 5,
+    method(callback) {
+        callback();
+    },
+};
+
+object.method(callback, 1, 2);
+
+//Output: 0
+______________________________________________________________________________________________________________
