@@ -1,0 +1,70 @@
+                                    JavaScript (Part-8) Practice Questions
+                                   ________________________________________
+
+
+
+
+
+
+
+
+//1. Square and sum the array elements using the arrow function and then find the average of the array.
+
+let arr = [1, 2, 3, 4, 5];
+
+const square = arr.map((el) => el*el);
+
+let sum = square.reduce((res, el) => res+el, 0);
+
+let average = sum/arr.length;
+
+console.log("Square of the array elements: ", square);
+console.log("Sum of the array elements: ", sum);
+console.log("Average of the array elements: ", average);
+______________________________________________________________________________________________________________
+
+//2. Create a new array using the map function whose each element is equal to the original element plus 5.
+
+let arr = [1, 2, 3, 4, 5];
+
+let newarr = arr.map((el) => el+5);
+
+console.log("Original array: ", arr);
+console.log("New array: ", newarr);
+______________________________________________________________________________________________________________
+
+//3. Create a new array whose elements are in uppercase of words present in the original array.
+
+let str = ["jyoti", "madhur", "ellie", "peter"];
+
+let newstr = str.map((el) => el.toUpperCase());
+console.log(newstr);
+______________________________________________________________________________________________________________
+
+//4. Write a function called doubleAndReturnArgs which accepts an array and a variable number of arguments.
+//   The function should return a new array with the original array values and all of the additional 
+//   arguments doubled.
+
+let arr = [1, 2, 3, 4];
+
+let doubleAndReturnArgs = (arr, ...args) => [...arr, ...args.map((el) => el*2)];
+console.log(doubleAndReturnArgs(arr, 5, 6));
+______________________________________________________________________________________________________________
+
+//5. Write a function called mergeObjects that accepts two objects and returns a new object which contains 
+//   all the keys and values of the first object and second object.
+
+const obj1 = {
+    name: "Jyoti", 
+    age: 27, 
+    city: "Gwalior"
+};
+const obj2 = {
+    name2: "Madhur", 
+    age2: 28, 
+    city2: "Delhi"
+};
+
+const mergeObjects = (obj1, obj2) => ({...obj1, ...obj2});
+console.log(mergeObjects(obj1, obj2));
+______________________________________________________________________________________________________________
